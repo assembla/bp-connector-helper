@@ -9,6 +9,7 @@ describe('Translator', function() {
   beforeEach(function() {
     itemData      = { name: 'itemOne' };
     translateHook = jasmine.createSpy('translateHook').andReturn(itemData);
+    delete translator.item;
   });
 
   describe('ruleFor', function() {
