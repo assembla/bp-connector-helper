@@ -4,24 +4,27 @@
   "description": "Helper for the BigPlans.io connector modules",
   "author": "Assembla Inc.",
   "license": "MIT",
-
   "main": "main.js",
-
   "private": true,
+
   "directories": {
     "test": "spec"
   },
+
   "scripts": {
     "test": "grunt test"
   },
+
   "keywords": [
     "bigplans",
     "connector"
   ],
+
   "repository": {
     "type": "git",
     "url": "https://github.com/Assembla/bp-connector-helper.git"
   },
+
   "dependencies": {
     "q": "1.0.1",
     "request": "2.34.0"

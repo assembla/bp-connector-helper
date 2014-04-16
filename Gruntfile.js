@@ -2,25 +2,33 @@
 
 module.exports = function(grunt) {
   grunt.initConfig({
-    'jasmine_node': {
-      projectRoot: './spec', // load only specs containing specNameMatcher
-      forceExit: true,
-      verbose: false,
-      captureExceptions: true
-    },
+    pkg: grunt.file.readJSON('package.json'),
+
     env: {
       test: { NODE_ENV: 'test' }
     },
+
+    'jasmine_node': {
+      options: {
+        projectRoot: './spec',
+        verbose: false,
+        forceExit: true,
+        captureExceptions : true
+      },
+      all: [ './spec' ]
+    },
+
     jshint: {
       files: [
         'Gruntfile.js',
         'package.json',
-        'requirements.json',
         '.jshintrc',
         'lib/**/*.js',
         'spec/**/*.js',
+        'expamles/**/*.js',
         '*.js'
       ],
+
       options: {
         jshintrc: '.jshintrc'
       }
